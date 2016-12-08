@@ -1,3 +1,9 @@
+// FT 2016-12-06
+// add CRC package to the application
+functionGlobalContext: {
+   crc:require('crc')
+},
+
 /**
  * Copyright 2014 IBM Corp.
  *
@@ -51,9 +57,7 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
-    functionGlobalContext: { 
-       crc:require('crc')
-    },
+    functionGlobalContext: { },
 
     storageModule: require("./couchstorage")
 }
